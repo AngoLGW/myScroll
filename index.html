@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>jQuery无缝滚动</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 400px;
+			margin: 50px auto;
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.title {
+			border-left: 5px solid blue;
+			line-height: 35px;
+			padding-left: 5px;
+			margin-bottom: 5px;
+		}
+
+		.myScroll {
+			width: 400px;
+			height: 260px;
+			border: 1px solid #ccc;
+			line-height: 26px;
+			font-size: 12px;
+			overflow: hidden;
+		}
+
+		.flex-between {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.flex-between-center {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.bg-primary {
+			background-color: #0099CC;
+		}
+
+		.padding-5 {
+			padding: 5px;
+		}
+
+		.margin-t-20 {
+			margin-top: 20px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.inline {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #339933;
+			margin: 0 10px;
+		}
+
+		.underline {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #FF0033;
+			margin: 0 10px;
+		}
+
+		.select {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="header">jQuery无缝滚动</h1>
+		<h4 class="title">车辆巡查</h4>
+		<div class="myScroll">
+			<ul>
+				<li>
+					<div class="margin-b-5 padding-5">
+						<div class="flex-between-center">
+							<div>
+								<div class="bg-primary padding-5 margin-b-5">闽D29101</div>
+								<div>在线状态</div>
+							</div>
+							<div>保洁车</div>
+						</div>
+						<div class="flex-between">
+							<div><span class="inline"></span>在线</div>
+							<div>上次在线 2018-09-23 10:32:32</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="margin-b-5 padding-5">
+						<div class="flex-between-center">
+							<div>
+								<div class="bg-primary padding-5 margin-b-5">闽D29102</div>
+								<div>在线状态</div>
+							</div>
+							<div>保洁车</div>
+						</div>
+						<div class="flex-between">
+							<div><span class="underline"></span>离线</div>
+							<div>上次在线 2018-09-23 10:32:32</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="margin-b-5 padding-5">
+						<div class="flex-between-center">
+							<div>
+								<div class="bg-primary padding-5 margin-b-5">闽D29103</div>
+								<div>在线状态</div>
+							</div>
+							<div>保洁车</div>
+						</div>
+						<div class="flex-between">
+							<div><span class="underline"></span>离线</div>
+							<div>上次在线 2018-09-23 10:32:32</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="margin-b-5 padding-5">
+						<div class="flex-between-center">
+							<div>
+								<div class="bg-primary padding-5 margin-b-5">闽D29104</div>
+								<div>在线状态</div>
+							</div>
+							<div>保洁车</div>
+						</div>
+						<div class="flex-between">
+							<div><span class="inline"></span>在线</div>
+							<div>上次在线 2018-09-23 10:32:32</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="margin-b-5 padding-5">
+						<div class="flex-between-center">
+							<div>
+								<div class="bg-primary padding-5 margin-b-5">闽D29105</div>
+								<div>在线状态</div>
+							</div>
+							<div>保洁车</div>
+						</div>
+						<div class="flex-between">
+							<div><span class="underline"></span>离线</div>
+							<div>上次在线 2018-09-23 10:32:32</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="margin-t-20">
+			<div class="select"><a href="./index.html">li元素固定格式展示</a></div>
+			<div class="select"><a href="./index2.html">li元素无固定格式展示</a></div>
+			<div class="select"><a href="./index3.html">横向滚动展示</a></div>
+		</div>
+	</div>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/myScroll.js"></script>
+	<script type="text/javascript">
+		var myScroll;
+		$(window).load(function () {
+			myScroll = $('.myScroll').myScroll({
+				speed: 80, //数值越大，速度越快
+			});
+		});
+	</script>
+
+</body>
+
+
+</html>

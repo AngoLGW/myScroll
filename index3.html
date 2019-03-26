@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>jQuery无缝滚动</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 400px;
+			margin: 50px auto;
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.title {
+			border-left: 5px solid blue;
+			line-height: 35px;
+			padding-left: 5px;
+			margin-bottom: 5px;
+		}
+
+		.myScroll {
+			width: 600px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+		}
+
+		.myScroll ul {
+			white-space: nowrap;
+			display: inline-block;
+		}
+
+		.myScroll ul li {
+			display: inline-block;
+			margin: 10px;
+		}
+
+		.myScroll ul img {
+			vertical-align: top;
+		}
+
+		.padding-5 {
+			padding: 5px;
+		}
+
+		.margin-t-20 {
+			margin-top: 20px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.select {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="header">jQuery无缝滚动</h1>
+		<h4 class="title">图片横向滚动(文字排版也可以)</h4>
+		<div class="myScroll">
+			<ul>
+				<li><img src="./images/0001.png" alt=""></li>
+				<li><img src="./images/0002.png" alt=""></li>
+				<li><img src="./images/0003.png" alt=""></li>
+				<li><img src="./images/0004.png" alt=""></li>
+				<li><img src="./images/0005.png" alt=""></li>
+				<li><img src="./images/0006.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="margin-t-20">
+			<div class="select"><a href="./index.html">li元素固定格式展示</a></div>
+			<div class="select"><a href="./index2.html">li元素无固定格式展示</a></div>
+			<div class="select"><a href="./index3.html">横向滚动展示</a></div>
+		</div>
+	</div>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/myScroll.js"></script>
+	<script type="text/javascript">
+		var myScroll;
+		$(window).load(function () {
+			myScroll = $('.myScroll').myScroll({
+				speed: 80, //数值越大，速度越快
+				direction: 'horizantal'
+			});
+		});
+	</script>
+
+</body>
+
+
+</html>
